@@ -1,6 +1,6 @@
 {
   "name": "@sigmasd/nvim-types",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "repository": {
     "type": "git",
     "url": "https://github.com/sigmaSd/nvim-types"
@@ -16,6 +16,9 @@
     "lua-types": "^2.13.0",
     "typescript": "^4.8.3",
     "vscode-languageserver-types": "^3.17.2",
+    "@typescript-to-lua/language-extensions": "^1.0.0"
+  }, 
+  "devDependencies": {
     "@typescript-to-lua/language-extensions": "^1.0.0"
   }
 }
