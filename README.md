@@ -11,7 +11,7 @@ npm install @sigmasd/nvim-types lua-types @typescript-to-lua/language-extensions
 ```
 
 
-2. Modify your `tsconfig.json` to activate the types
+2.  Activate the types in `tsconfig.json`
 
 ```json
   {
