@@ -7,7 +7,7 @@ This npm package provide types that you can use with https://github.com/TypeScri
 1. Get this package from npm
 
 ```bash
-npm install @ts-defold/types --save-dev 
+npm install @sigmasd/nvim-types --save-dev 
 ```
 
 2. Modify your `tsconfig.json`
