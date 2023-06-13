@@ -1,6 +1,5 @@
-//FIXME: use dynamic import like vscode, one fails
-//await import("./methods.ts") works locally but fails remotly
-import { Methods } from "./methods";
+///<reference path="methods.ts" />
+
 
 declare namespace NvimLsp {
   interface BaseParams {
