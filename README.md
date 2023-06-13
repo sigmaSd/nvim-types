@@ -15,7 +15,7 @@ npm install @ts-defold/types --save-dev
 ```diff
 {
   "compilerOptions": {
-+    "types": ["@sigmasd/types"]
++    "types": ["@sigmasd/nvim-types"]
   }
 }
 ```
