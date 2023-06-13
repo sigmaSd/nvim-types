@@ -1,6 +1,10 @@
 {
   "name": "@sigmasd/nvim-types",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sigmaSd/nvim-types"
+  },
 
   "files": [
     "dist/**/*.d.ts"
