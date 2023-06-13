@@ -1,4 +1,3 @@
-import { } from "./methods";
 declare namespace NvimLsp {
   interface BaseParams {
     textDocument: import("vscode-languageserver-types").TextDocumentIdentifier;
