@@ -1,3 +1,7 @@
+//FIXME: use dynamic import like vscode, one fails
+//await import("./methods.ts") works locally but fails remotly
+import { Methods } from "./methods";
+
 declare namespace NvimLsp {
   interface BaseParams {
     textDocument: import("vscode-languageserver-types").TextDocumentIdentifier;
@@ -38,13 +42,13 @@ declare namespace NvimLsp {
     };
     offset_encoding: string;
     request: <T, U = Record<string, unknown>>(
-      method: import("./methods").Methods,
+      method: Methods,
       params: U,
       handler?: Handler<T>,
       bufnr?: number
     ) => boolean;
     request_sync: <T, U = Record<string, unknown>>(
-      method: import("./methods").Methods,
+      method: Methods,
       params: U,
       timeout_ms?: number,
       bufnr?: number

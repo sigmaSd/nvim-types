@@ -1,0 +1,42 @@
+lockfileVersion: '6.0'
+
+dependencies:
+  '@types/node':
+    specifier: ^18.7.18
+    version: 18.7.18
+  '@typescript-to-lua/language-extensions':
+    specifier: ^1.0.0
+    version: 1.0.0
+  lua-types:
+    specifier: ^2.13.0
+    version: 2.13.0
+  typescript:
+    specifier: ^4.8.3
+    version: 4.8.3
+  vscode-languageserver-types:
+    specifier: ^3.17.2
+    version: 3.17.2
+
+packages:
+
+  /@types/node@18.7.18:
+    resolution: {integrity: sha512-m+6nTEOadJZuTPkKR/SYK3A2d7FZrgElol9UP1Kae90VVU4a6mxnPuLiIW1m4Cq4gZ/nWb9GrdVXJCoCazDAbg==}
+    dev: false
+
+  /@typescript-to-lua/language-extensions@1.0.0:
+    resolution: {integrity: sha512-GtmhFqyg+txpGgGLM3mlS3R6AEG9MQhKALxxcbr6SBzg9u7YAXcPKqUBaBYd6nH+Pi/eQLcWz4BNOLhz8v4TjQ==}
+    dev: false
+
+  /lua-types@2.13.0:
+    resolution: {integrity: sha512-wra+mIPZlcbm8bYoM6QutEwTOAjZ9KyKMiaidGeZ+QJItIAK9hwG+1I6GCDKnW0T9E/Xv2IoTFtZwxQv4zAIJw==}
+    dev: false
+
+  /typescript@4.8.3:
+    resolution: {integrity: sha512-goMHfm00nWPa8UvR/CPSvykqf6dVV8x/dp0c5mFTMTIu0u0FlGWRioyy7Nn0PGAdHxpJZnuO/ut+PpQ8UiHAig==}
+    engines: {node: '>=4.2.0'}
+    hasBin: true
+    dev: false
+
+  /vscode-languageserver-types@3.17.2:
+    resolution: {integrity: sha512-zHhCWatviizPIq9B7Vh9uvrH6x3sK8itC84HkamnBWoDFJtzBf7SWlpLCZUit72b3os45h6RWQNC9xHRDF8dRA==}
+    dev: false
