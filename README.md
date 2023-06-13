@@ -4,21 +4,24 @@ This npm package provide types that you can use with https://github.com/TypeScri
 
 ## Usage
 
-1. Get this package from npm
+1. Install this package and the required dependencies for a tstl project
 
 ```bash
-npm install @sigmasd/nvim-types --save-dev 
+npm install @sigmasd/nvim-types lua-types @typescript-to-lua/language-extensions typescript-to-lua typescript --save-dev 
 ```
 
-2. Modify your `tsconfig.json`
 
-```diff
-{
+2. Modify your `tsconfig.json` to activate the types
+
+```json
+  {
   "compilerOptions": {
-+    "types": ["@sigmasd/nvim-types"]
+    "types": ["@sigmasd/nvim-types", "@typescript-to-lua/language-extensions", "lua-types/jit"]
   }
 }
 ```
+
+Thats it you should be able now to run your project (`npx tstl -p tsconfig.json`) and have lsp working correctly.
 
 ## Credits
 
