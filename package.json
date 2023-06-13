@@ -7,7 +7,7 @@
   },
 
   "files": [
-    "dist/**/*.ts",
+    "dist/**/*.ts"
   ],
 
   "types": "./dist/nvim.d.ts",
