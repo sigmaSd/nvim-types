@@ -1,13 +1,13 @@
 {
   "name": "@sigmasd/nvim-types",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "repository": {
     "type": "git",
     "url": "https://github.com/sigmaSd/nvim-types"
   },
 
   "files": [
-    "dist/**/*.d.ts"
+    "dist/**/*.ts",
   ],
 
   "types": "./dist/nvim.d.ts",

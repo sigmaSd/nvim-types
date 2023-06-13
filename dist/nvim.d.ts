@@ -1,6 +1,4 @@
-///<reference path="methods.ts" />
-
-
+import { } from "./methods";
 declare namespace NvimLsp {
   interface BaseParams {
     textDocument: import("vscode-languageserver-types").TextDocumentIdentifier;
@@ -41,13 +39,13 @@ declare namespace NvimLsp {
     };
     offset_encoding: string;
     request: <T, U = Record<string, unknown>>(
-      method: Methods,
+      method: import("./methods").Methods,
       params: U,
       handler?: Handler<T>,
       bufnr?: number
     ) => boolean;
     request_sync: <T, U = Record<string, unknown>>(
-      method: Methods,
+      method: import("./methods").Methods,
       params: U,
       timeout_ms?: number,
       bufnr?: number
