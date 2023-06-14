@@ -63,14 +63,17 @@ declare namespace NvimLsp {
 declare namespace Nvim {
   interface CommandOptions {
     bang: boolean;
+    args?: string,
   }
   interface CommandAttributes {
     bang?: boolean;
+    nargs?: string,
   }
 }
 
 /** @noSelf **/
 declare namespace vim {
+  const split: (s: string, sep: string, opts?: { plain: boolean, trimempty: boolean }) => string[];
   const inspect: (...args: unknown[]) => void;
   const schedule: (callback: () => void) => void;
   const tbl_isempty: (tbl: unknown[]) => boolean;
@@ -78,6 +81,9 @@ declare namespace vim {
     behavior: "error" | "keep" | "force",
     ...tables: T[]
   ) => T;
+
+  const g: Record<string, any>
+  const o: Record<string, any>
 
   namespace lsp {
     const handlers: NvimLsp.Handlers;
@@ -125,12 +131,21 @@ declare namespace vim {
     const nvim_get_current_buf: () => number;
     const nvim_get_current_win: () => number;
     const nvim_buf_call: (bufnr: number, callback: () => void) => void;
+    //FIXME: buffer: buffer-handle
+    const nvim_buf_set_name: (buffer: number, name: string) => void;
     const nvim_buf_get_lines: (
       bufnr: number,
       start: number,
       end: number,
       strictIndexing: boolean
     ) => string[];
+    const nvim_buf_set_lines: (
+      bufnr: number,
+      start: number,
+      end_: number,
+      strictIndexing: boolean,
+      replacement: string[],
+    ) => void;
     const nvim_buf_get_name: (bufnr: number) => string;
     const nvim_buf_create_user_command: (
       bufnr: number,
@@ -138,8 +153,15 @@ declare namespace vim {
       command: (opts: Nvim.CommandOptions) => void,
       attributes: Nvim.CommandAttributes
     ) => void;
+    const nvim_command: (command: string) => void;
+    const nvim_create_user_command: (
+      name: string,
+      command: (opts: Nvim.CommandOptions) => void,
+      attributes: Nvim.CommandAttributes
+    ) => void;
     const nvim_buf_get_option: <T>(bufnr: number, name: string) => T;
     const nvim_buf_delete: (bufnr: number, opts?: { force?: boolean }) => void;
+    const nvim_exec2: (src: string, opts?: { output?: boolean }) => { output?: string | null };
     const nvim_list_wins: () => number[];
     const nvim_win_get_buf: (win: number) => number;
     const nvim_win_set_buf: (win: number, bufnr: number) => void;
